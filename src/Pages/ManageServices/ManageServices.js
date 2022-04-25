@@ -5,7 +5,7 @@ const ManageServices = () => {
   const [services, setServices] = useServices();
 
   const handleDelete = async (id) => {
-    const url = `http://localhost:5000/service/${id}`;
+    const url = `https://mysterious-plains-30043.herokuapp.com/service/${id}`;
     const proceed = window.confirm('Are you sure you want to delte?');
     if (proceed) {
       await fetch(url, {

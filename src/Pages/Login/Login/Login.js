@@ -40,7 +40,10 @@ const Login = () => {
     const password = passwordRef.current.value;
 
     await signInWithEmailAndPassword(email, password);
-    const { data } = await axios.post('http://localhost:5000/login', { email });
+    const { data } = await axios.post(
+      'https://mysterious-plains-30043.herokuapp.com/login',
+      { email }
+    );
     localStorage.setItem('accessToken', data);
     navigate(from, { replace: true });
   };

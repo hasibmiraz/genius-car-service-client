@@ -20,13 +20,15 @@ const Checkout = () => {
       phone: e.target.phone.value,
       email: e.target.email.value,
     };
-    await axios.post('http://localhost:5000/order', order).then((res) => {
-      const { _id } = res.data;
-      if (_id) {
-        toast('Order placed successfullly!');
-        e.target.reset();
-      }
-    });
+    await axios
+      .post('https://mysterious-plains-30043.herokuapp.com/order', order)
+      .then((res) => {
+        const { _id } = res.data;
+        if (_id) {
+          toast('Order placed successfullly!');
+          e.target.reset();
+        }
+      });
   };
 
   return (

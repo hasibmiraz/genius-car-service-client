@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "genius-car-services-18c77"
-  }
+    "default": "simple-firebase-auth-e268f",
+    "firebase deploy": "simple-firebase-auth-e268f"
+  },
+  "targets": {}
 }
